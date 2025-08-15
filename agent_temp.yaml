@@ -31,8 +31,6 @@ agent:
 
 # Remote servers the agent's internal client needs to connect to
 
-# This block would be part of your agent.yaml file
-
 mcp_servers:
   github:
     url: "https://api.github.com/mcp"
