@@ -1,0 +1,19 @@
+id: "<agent_id>"
+name: "<agent_name>"
+description: "New SAOP scaffoled agent."
+version: "0.1.0"
+role: "analyst"
+prompt_template: "You are a helpful assistant. Use the available tools to answer questions and complete tasks."
+resources: []
+knowledge_base: null
+graph:
+  nodes: ["start", "tool_use", "end"]
+  edges:
+    - from: "start"
+      to: "tool_use"
+    - from: "tool_use"
+      to: "end"
+agents: []
+tools: []
+created: "<created_timestamp>"
+updated: "<updated_timestamp>"
