@@ -1,19 +1,43 @@
-id: "<agent_id>"
-name: "<agent_name>"
-description: "New SAOP scaffoled agent."
-version: "0.1.0"
-role: "analyst"
-prompt_template: "You are a helpful assistant. Use the available tools to answer questions and complete tasks."
-resources: []
-knowledge_base: null
-graph:
-  nodes: ["start", "tool_use", "end"]
-  edges:
-    - from: "start"
-      to: "tool_use"
-    - from: "tool_use"
-      to: "end"
-agents: []
-tools: []
-created: "<created_timestamp>"
-updated: "<updated_timestamp>"
+agent:
+  id: "saop-agent-v1"
+  name: "Standardised Agent Orchestration Platform"
+  description: "An agent that orchestrates calls to multiple external MCP servers."
+  version: "1.0.0"
+  role: "orchestrator"
+  prompt_template: ""
+  resources: []
+  knowledge_base: null
+  graph: {}
+  created: "2025-01-01T00:00:00Z"
+  updated: "2025-01-01T00:00:00Z"
+  agents: []
+  tools: []
+  
+environment:
+  MODEL_API_KEY: ""
+  MODEL_BASE_URL: ""
+  MODEL_NAME: "gpt-4o"
+  MODEL_TEMPERATURE: 0.7
+  A2A_AGENT_CARD_PATH: "/.well-known/agent-card.json"
+  A2A_HOST: "0.0.0.0"
+  A2A_PORT: 8000
+  MCP_BASE_URL: ""
+  MCP_API_KEY: ""
+  OTEL_EXPORTER_OTLP_ENDPOINT: "http://localhost:4317"
+  REDIS_URL: ""
+  DATABASE_URL: "postgresql://postgres:Weinwewin2007!@localhost:5432/postgres"
+  AUTH_CLIENT_ID: ""
+  AUTH_CLIENT_SECRET: ""
+  HASHICORP_VAULT_ADDR: ""
+  AWS_SECRETS_MANAGER_ARN: ""
+
+mcp_servers:
+  github:
+    url: "https://api.github.com/mcp"
+    api_key: "gh-key"
+  google:
+    url: "https://googleapis.com/mcp"
+    api_key: "google-api-key"
+  slack:
+    url: "https://api.slack.com/mcp"
+    api_key: "slack-api-key"
