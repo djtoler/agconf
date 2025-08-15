@@ -22,7 +22,6 @@ environment:
   A2A_HOST: "0.0.0.0"
   A2A_PORT: 8000
   MCP_BASE_URL: ""
-  MCP_API_KEY: ""
   OTEL_EXPORTER_OTLP_ENDPOINT: "http://localhost:4317"
   REDIS_URL: ""
   DATABASE_URL: "postgresql://postgres:Weinwewin2007!@localhost:5432/postgres"
