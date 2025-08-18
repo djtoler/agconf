@@ -1,0 +1,52 @@
+agent:
+  id: "my-first-agent"
+  name: "Legal Agent"
+  description: "An agent that helps with legal document analysis."
+  version: "1.0.0"
+  role: "legal"
+  prompt_template: "You are a legal expert. Use the provided tools to analyze documents."
+  resources: []
+  knowledge_base: null
+  graph: {}
+  created: "2025-01-01T00:00:00Z"
+  updated: "2025-01-01T00:00:00Z"
+  agents: []
+  tools:
+    - id: "analyze_document"
+      name: "analyze_document"
+      description: "Analyzes a legal document for key clauses."
+      tags: ["legal", "document-analysis"]
+      input_schema:
+        type: "object"
+        properties:
+          document_id:
+            type: "string"
+    - id: "query_database"
+      name: "query_database"
+      description: "Queries the legal database for case law."
+      tags: ["legal", "database"]
+      input_schema:
+        type: "object"
+        properties:
+          query:
+            type: "string"
+
+# A2A AgentCard fields
+
+url: "http://127.0.0.1:8000"
+capabilities:
+  web: true
+default_input_modes: ["text"]
+default_output_modes: ["text"]
+
+
+mcp_servers:
+  github:
+    url: "https://api.github.com/mcp"
+    auth: ${MCP_GITHUB_API_KEY}
+  google:
+    url: "https://googleapis.com/mcp"
+    auth: ${MCP_GOOGLE_API_KEY}
+  slack:
+    url: "https://api.slack.com/mcp"
+    auth: ${MCP_SLACK_API_KEY}

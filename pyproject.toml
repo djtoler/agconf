@@ -1,0 +1,15 @@
+[project]
+name = "mcp-server"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "a2a-python[http-server]>=0.0.1",
+    "a2a-sdk[grpc,http-server,telemetry]>=0.3.1",
+    "aiofiles>=24.1.0",
+    "fastmcp>=2.11.3",
+    "starlette>=0.47.2",
+    "uvicorn>=0.35.0",
+    "yfinance>=0.2.65",
+]
